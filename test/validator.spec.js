@@ -1,6 +1,8 @@
 // importamos el objeto `validator`, que contiene las funciones `isValid` y `maskify`
 import validator from '../src/validator';
 
+// Callback es una funcion dentro un parámetro
+
 describe('validator', () => {
   it('debería ser un objeto', () => {
     expect(typeof validator).toBe('object');
