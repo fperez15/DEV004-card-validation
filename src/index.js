@@ -22,10 +22,12 @@ btnValidar.addEventListener("click", () => {
   }
 
   const forValidateInput = validator.isValid(formattCaptureInput);
+  const ocultarPassword = validator.maskify(formattCaptureInput);
+  document.getElementById("cardnumber").value = ocultarPassword;
 
-  if (forValidateInput) {
-    return alert("La tarjeta fue validada exitosamente gracias a Francis");
+  if (forValidateInput && ocultarPassword === true) {
+    return alert("La tarjeta fue validada ");
   } else {
-    return alert("Lo siento pero lamento informar que su tarjeta se clonó");
+    return alert("Tarjeta Invalida");
   }
 });

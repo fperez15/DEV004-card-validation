@@ -2,7 +2,7 @@ const validator = {
   isValid(creditNumber) {
     // Convertir en array con el split e invertir los elementos
     const arrayInvertido = creditNumber.split("").map(Number).reverse();
-    
+
     // Identificar los numeros pares
     const arrayElementPar = arrayInvertido.filter(function (element, indice) {
       if (indice % 2 === 1) return element;
@@ -30,14 +30,12 @@ const validator = {
       }
     });
 
-    
     const nuevoArray = [...arrayFormattPar, ...arrayElementImpar];
-    
 
     const sumaFinal = nuevoArray.reduce(function (a, b) {
       return a + b;
     });
-    
+
     if (sumaFinal % 10 === 0) {
       return true;
     } else {
@@ -45,8 +43,8 @@ const validator = {
     }
   },
 
-  maskify() {
-    return "Te atrape is Maskify";
+  maskify(creditCard) {
+    return creditCard.slice(0, -4).replace(/./g, "#") + creditCard.slice(-4);
   },
 };
 
