@@ -46,6 +46,19 @@ const validator = {
   maskify(creditCard) {
     return creditCard.slice(0, -4).replace(/./g, "#") + creditCard.slice(-4);
   },
+
+  franchise(inputCardNumber, image) {
+    inputCardNumber.addEventListener("input", () => {
+      const firstChar = inputCardNumber.value;
+      if (firstChar[0] === "5") {
+        image.src = "../img/mastercard.jpg";
+      } else if (firstChar[0] === "4") {
+        image.src = "../img/visa.jpg";
+      } else {
+        image.src = "../img/default.jpg";
+      }
+    });
+  }
 };
 
 export default validator;

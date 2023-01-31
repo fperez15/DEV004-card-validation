@@ -1,10 +1,13 @@
 import validator from "./validator.js";
 
 const btnValidar = document.getElementById("btnValidar");
+const inputCardNumber = document.getElementById("cardnumber");
+const image = document.getElementById("image");
+
+validator.franchise(inputCardNumber, image);
 
 btnValidar.addEventListener("click", () => {
   const captureInput = document.getElementById("cardnumber").value;
-
   // Aplicar sin espacio el valor del input
   const formattCaptureInput = captureInput.replaceAll(" ", "");
   document.getElementById("cardnumber").value = formattCaptureInput;
@@ -25,9 +28,10 @@ btnValidar.addEventListener("click", () => {
   const ocultarPassword = validator.maskify(formattCaptureInput);
   document.getElementById("cardnumber").value = ocultarPassword;
 
-  if (forValidateInput && ocultarPassword === true) {
-    return alert("La tarjeta fue validada ");
+
+  if (forValidateInput === true) {
+    return alert("La tarjeta fue validada");
   } else {
-    return alert("Tarjeta Invalida");
+    return alert("Tarjeta Inválida");
   }
 });

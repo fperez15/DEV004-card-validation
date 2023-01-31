@@ -43,4 +43,10 @@ describe('validator', () => {
       expect(validator.maskify('helloworld')).toBe('######orld');
     });
   });
+
+  describe('validator.franchise', () => {
+    it('debería ser una función', () => {
+      expect(typeof validator.franchise).toBe('function');
+    });
+  });
 });
