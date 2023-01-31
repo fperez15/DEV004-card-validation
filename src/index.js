@@ -30,8 +30,8 @@ btnValidar.addEventListener("click", () => {
 
 
   if (forValidateInput === true) {
-    return alert("La tarjeta fue validada");
+    return alert("Tarjeta Valida");
   } else {
-    return alert("Tarjeta Inválida");
+    return alert("Tarjeta Inválida, Realice cambio de tarjeta");
   }
 });
