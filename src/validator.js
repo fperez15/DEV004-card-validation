@@ -15,15 +15,16 @@ const validator = {
     // Multiplicar *2 y validar si son >= 10 para sumar sus digitos
     const arrayFormattPar = arrayElementPar.map(function (element) {
       const operacionElement = element * 2;
+      console.log("elemento *2", operacionElement);
 
       if (operacionElement >= 10) {
         const arrayDigitos = operacionElement.toString().split("").map(Number);
-
+        
         const sumaArrayDigitos = arrayDigitos.reduce(function (a, b) {
           return a + b;
         });
-        // console.log('arrayDigitos: ', arrayDigitos);
-        // console.log('sumaArrayDigitos: ', sumaArrayDigitos);
+        //console.log('arrayDigitos: ', arrayDigitos);
+        //console.log('sumaArrayDigitos: ', sumaArrayDigitos);
         return sumaArrayDigitos;
       } else {
         return operacionElement;
@@ -31,7 +32,7 @@ const validator = {
     });
 
     const nuevoArray = [...arrayFormattPar, ...arrayElementImpar];
-
+    //console.log("suma de el array par e impar", nuevoArray)
     const sumaFinal = nuevoArray.reduce(function (a, b) {
       return a + b;
     });
