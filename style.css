@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans';
+    background-color: red;
+}
+
+.container {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 350px;
+    height: 340px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 50px 30px;
+    background-color: #fff;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.info {
+  text-align: center;
+}
+
+.validation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.franquicia {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.input {
+    border: 2px solid red;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+   
+    background-color: rgba(247, 11, 11, 0);
+    
+}
+
+.button {
+    border-radius:8px;
+    background-color: #fff;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #fa0404;
+    color: #fff;
+}
+
+  
