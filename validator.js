@@ -52,11 +52,11 @@ const validator = {
     inputCardNumber.addEventListener("input", () => {
       const firstChar = inputCardNumber.value;
       if (firstChar[0] === "5") {
-        image.src = "../img/mastercard.jpg";
+        image.src = "img/mastercard.jpg";
       } else if (firstChar[0] === "4") {
-        image.src = "../img/visa.jpg";
+        image.src = "img/visa.jpg";
       } else {
-        image.src = "../img/default.jpg";
+        image.src = "img/default.jpg";
       }
     });
   }
